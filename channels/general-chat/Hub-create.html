@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta-Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create and manage temporary voice channels via the Voice Hub. Learn ownership, permissions, and voice commands for a smooth, customizable VC experience.">
+    <meta name="keywords" content="temporary voice channels, discord voice commands, voice hub, voice channel management, permissions, customization, voice-ban, voice-lock, voice-rename, MEE6 voice">
+    <meta name="author" content="Empire of Shadows">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#4d0eb3">
+    <title>Temporary Voice Channels Guide - Empire of Shadows Wiki</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav/favicon-32x32.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/global/css/normalize.css">
+    <link rel="stylesheet" href="/global/css/global_reset.css">
+    <link rel="stylesheet" href="/global/css/index-header.css">
+    <link rel="stylesheet" href="/wiki/home.css">
+    <link rel="stylesheet" href="/wiki/shared/nav.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header-main">
+    <div class="header-container">
+        <!-- Logo -->
+        <a class="nav-logo" href="/index.html">
+            <img src="/images/Logo.png" alt="Empire of Shadows Logo" width="85" height="85">
+        </a>
+        <div class="header-line"></div>
+    </div>
+</header>
+
+<div class="layout-container">
+    <!-- Sidebar navigation -->
+    <div id="nav-placeholder-side"></div>
+    <!-- Backdrop -->
+    <div class="nav-backdrop"></div>
+
+    <main class="content">
+        <header class="page-hero">
+            <h1>🎙️ Temporary Voice Channels</h1>
+            <p class="muted">Create your own voice channel from the Voice Hub, customize it, and manage who can join — all with simple commands.</p>
+        </header>
+
+        <!-- On this page -->
+        <nav class="card toc-card" aria-label="On this page">
+            <strong>On this page</strong>
+            <ul class="list-tight">
+                <li><a class="toc-link" href="#overview">Overview</a></li>
+                <li><a class="toc-link" href="#getting-started">Getting started</a></li>
+                <li><a class="toc-link" href="#permissions">Permissions</a></li>
+                <li><a class="toc-link" href="#commands">Commands</a></li>
+                <li><a class="toc-link" href="#tips">Tips & notes</a></li>
+                <li><a class="toc-link" href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Overview -->
+        <section id="overview" class="section-card" aria-labelledby="overview-title">
+            <h2 id="overview-title">
+                Overview
+                <a class="anchor" href="#overview">#</a>
+            </h2>
+            <p>Temporary Voice Channels are auto-created when you join the Voice Hub. You instantly become the channel owner and can control access, name, and visibility. Channels are removed automatically when inactive.</p>
+            <details class="details-card">
+                <summary>How ownership works</summary>
+                <ul class="list-tight">
+                    <li>Joining the Voice Hub spawns your personal VC and grants you ownership.</li>
+                    <li>If you leave, ownership may transfer or be claimable after a short time.</li>
+                    <li>Moderators can override settings when needed.</li>
+                </ul>
+            </details>
+        </section>
+
+        <!-- Getting Started -->
+        <section id="getting-started" class="section-card" aria-labelledby="start-title">
+            <h2 id="start-title">
+                Getting started
+                <a class="anchor" href="#getting-started">#</a>
+            </h2>
+            <ol class="steps-list">
+                <li>Join the Voice Hub channel.</li>
+                <li>Your personal VC appears (e.g., “#1 — Username’s Channel”).</li>
+                <li>Use the commands below to set limits, rename, lock, or invite friends.</li>
+                <li>When empty for a while, the channel is cleaned up automatically.</li>
+            </ol>
+        </section>
+
+        <!-- Permissions -->
+        <section id="permissions" class="section-card" aria-labelledby="permissions-title">
+            <h2 id="permissions-title">
+                Permissions
+                <a class="anchor" href="#permissions">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li><strong>Owners:</strong> Full control of their own temporary VC via voice commands.</li>
+                <li><strong>Moderators:</strong> Can use voice commands in any temporary VC.</li>
+                <li><strong>Admins:</strong> Can manage, clean, and override settings globally.</li>
+            </ul>
+        </section>
+
+        <!-- Commands -->
+        <section id="commands" class="section-card" aria-labelledby="commands-title">
+            <h2 id="commands-title">
+                Commands
+                <a class="anchor" href="#commands">#</a>
+            </h2>
+
+            <h3>Access & visibility</h3>
+            <ul class="list-tight">
+                <li><code>/voice-lock</code> — Lock your VC to stop new joins</li>
+                <li><code>/voice-unlock</code> — Unlock and allow joins again</li>
+                <li><code>/voice-hide</code> — Hide your VC from others</li>
+                <li><code>/voice-reveal</code> — Make a hidden VC visible</li>
+            </ul>
+
+            <h3>People management</h3>
+            <ul class="list-tight">
+                <li><code>/voice-kick @member</code> — Remove a member from your VC</li>
+                <li><code>/voice-ban @member</code> — Block a member from joining</li>
+                <li><code>/voice-unban @member</code> — Remove a ban</li>
+                <li><code>/voice-transfer @member</code> — Give channel ownership to someone else</li>
+            </ul>
+
+            <h3>Channel settings</h3>
+            <ul class="list-tight">
+                <li><code>/voice-rename &lt;name&gt;</code> — Rename your VC (e.g., “Chill Zone”)</li>
+                <li><code>/voice-limit &lt;number&gt;</code> — Set a user limit (e.g., 4)</li>
+            </ul>
+
+            <h3>Admin utilities</h3>
+            <ul class="list-tight">
+                <li><code>/voice-claim</code> — Claim ownership if no active owner</li>
+                <li><code>/voice-clean</code> — Remove inactive temporary VCs</li>
+            </ul>
+
+            <details class="details-card">
+                <summary>Examples</summary>
+                <pre><code>/voice-rename Chill Zone
+/voice-limit 4
+/voice-lock
+/voice-kick @NoisyGuy
+/voice-ban @Troublemaker
+/voice-transfer @NewOwner
+/voice-claim
+/voice-clean</code></pre>
+            </details>
+        </section>
+
+        <!-- Tips -->
+        <section id="tips" class="section-card" aria-labelledby="tips-title">
+            <h2 id="tips-title">
+                Tips & notes
+                <a class="anchor" href="#tips">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>Use <code>/voice-lock</code> for private sessions and <code>/voice-unlock</code> to open back up.</li>
+                <li>Rename your VC to set the vibe or purpose (focus, co‑op, social).</li>
+                <li>Hand off ownership with <code>/voice-transfer</code> if you’re leaving.</li>
+                <li>Abusive kicks/bans may be moderated per server rules.</li>
+            </ul>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section-card" aria-labelledby="faq-title">
+            <h2 id="faq-title">
+                FAQ
+                <a class="anchor" href="#faq">#</a>
+            </h2>
+
+            <details class="details-card">
+                <summary>What happens when everyone leaves?</summary>
+                <p>The temporary VC is auto‑deleted after a short period of inactivity to keep things tidy.</p>
+            </details>
+
+            <details class="details-card">
+                <summary>Can I keep my VC permanent?</summary>
+                <p>Temporary VCs are designed to be ephemeral. If you need a permanent room, request it from staff.</p>
+            </details>
+
+            <details class="details-card">
+                <summary>I lost ownership — how do I get it back?</summary>
+                <p>If there’s no current owner, try <code>/voice-claim</code>. Otherwise, ask a moderator for assistance.</p>
+            </details>
+        </section>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Empire of Shadows. All Rights Reserved.</p>
+    <div id="social-icons-container"></div>
+    <script src="/global/js/social-icons.js"></script>
+    <script src="/wiki/shared/nav.js"></script>
+    <script>
+        // Dynamically load the navigation
+        fetch('/wiki/shared/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder-side').innerHTML = data;
+                // Initialize navigation state handlers
+                initSideNav?.();
+                restoreNavState?.();
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
+
+    <!-- Smooth in-page navigation and Back-to-Top -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+        // Smooth scroll for same-page anchors
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            const id = a.getAttribute('href').slice(1);
+            const target = document.getElementById(id);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.replaceState(null, '', '#' + id);
+            }
+        });
+
+        // Back-to-top visibility + behavior
+        const backBtn = document.querySelector('.back-to-top');
+        const toggleBackBtn = () => {
+            if (window.scrollY > 280) backBtn.classList.add('show');
+            else backBtn.classList.remove('show');
+        };
+        window.addEventListener('scroll', toggleBackBtn, { passive: true });
+        window.addEventListener('load', toggleBackBtn);
+        backBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</footer>
+</body>
+</html>
