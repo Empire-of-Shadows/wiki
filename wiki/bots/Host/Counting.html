@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta-Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Full user guide for the Empire of Shadows Discord Counting Game — how to play, rules, cooldowns, double-posting, mistakes, milestones, the Master Counter role, and the /leaderboard counting command with options and rate limits.">
+    <meta name="keywords" content="counting game, discord counting, user guide, counting rules, cooldowns, double posting, mistakes, milestones, Master Counter, leaderboard, /leaderboard counting, include_pending, top option, caching, rate limits, FAQ, Empire of Shadows, EOSO wiki">
+    <meta name="author" content="Empire of Shadows">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#4d0eb3">
+    <title>Counting Game User Guide - Empire of Shadows Wiki</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav/favicon-32x32.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/global/css/normalize.css">
+    <link rel="stylesheet" href="/global/css/global_reset.css">
+    <link rel="stylesheet" href="/global/css/index-header.css">
+    <link rel="stylesheet" href="/wiki/home.css">
+    <link rel="stylesheet" href="/wiki/shared/nav.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header-main">
+    <div class="header-container">
+        <!-- Logo -->
+        <a class="nav-logo" href="/index.html">
+            <img src="/images/Logo.png" alt="Empire of Shadows Logo" width="85" height="85">
+        </a>
+        <div class="header-line"></div>
+    </div>
+</header>
+
+<div class="layout-container">
+    <!-- Sidebar navigation -->
+    <div id="nav-placeholder-side"></div>
+    <!-- Backdrop -->
+    <div class="nav-backdrop"></div>
+
+    <main class="content">
+        <header class="page-hero">
+            <h1>Counting Game — User Guide</h1>
+        </header>
+
+        <!-- TL;DR -->
+        <section aria-labelledby="tldr" class="section-card callout--tldr">
+            <h2 id="tldr" class="visually-hidden">TL;DR</h2>
+            <ul class="list-tight">
+                <li>Numbers only; digits 0–9; max 12 digits; no edits.</li>
+                <li>Cooldown ≈2s; no double-posting unless idle/grace windows apply.</li>
+                <li>Mistakes are removed; bot posts expected number; milestone roles every 100.</li>
+                <li>Top counter holds “Master Counter.” View ranks via <code>/leaderboard counting</code>.</li>
+            </ul>
+        </section>
+
+        <!-- On this page -->
+        <nav class="card toc-card" aria-label="On this page">
+            <strong>On this page</strong>
+            <ul class="list-tight">
+                <li><a class="toc-link" href="#where-goal">Where to play & goal</a></li>
+                <li><a class="toc-link" href="#rules">Basic rules</a></li>
+                <li><a class="toc-link" href="#cooldowns">Cooldowns & double-posting</a></li>
+                <li><a class="toc-link" href="#mistakes">Mistakes, penalties, and edits</a></li>
+                <li><a class="toc-link" href="#milestones">Milestones & celebrations</a></li>
+                <li><a class="toc-link" href="#master">Master Counter role</a></li>
+                <li><a class="toc-link" href="#leaderboard">Leaderboard command</a></li>
+                <li><a class="toc-link" href="#faq">Quick FAQ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Where & Goal -->
+        <section aria-labelledby="where-goal" class="guidelines-section section-card">
+            <h2 id="where-goal">
+                Where to play & goal
+                <a class="anchor" href="#where-goal">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>Only post numbers in the designated counting channel(s). Check the channel topic if unsure.</li>
+                <li>Count upwards together, one message at a time: 1, 2, 3, 4, …</li>
+            </ul>
+        </section>
+
+        <!-- Rules -->
+        <section aria-labelledby="rules" class="guidelines-section section-card">
+            <h2 id="rules">
+                Basic rules
+                <a class="anchor" href="#rules">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>Post exactly the next number—no text, no emojis.</li>
+                <li>Use only digits (0–9), no spaces or symbols.</li>
+                <li>Number length limit: up to 12 digits.</li>
+            </ul>
+        </section>
+
+        <!-- Cooldowns -->
+        <section aria-labelledby="cooldowns" class="guidelines-section section-card">
+            <h2 id="cooldowns">
+                Cooldowns & double-posting
+                <a class="anchor" href="#cooldowns">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>You can send a valid number once every ~2 seconds.</li>
+                <li>No two numbers in a row unless:
+                    <ul class="list-tight">
+                        <li>≈15 seconds have passed since the last valid number, or</li>
+                        <li>The channel has been idle ≈30 seconds, or</li>
+                        <li>A short “streak protection” window is active right after a mistake and you post the correct next number.</li>
+                    </ul>
+                </li>
+                <li>The “Master Counter” has a stricter double-post timer (≈3× longer).</li>
+            </ul>
+        </section>
+
+        <!-- Mistakes -->
+        <section aria-labelledby="mistakes" class="guidelines-section section-card">
+            <h2 id="mistakes">
+                Mistakes, penalties, and edits
+                <a class="anchor" href="#mistakes">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>Wrong number or rule break:
+                    <ul class="list-tight">
+                        <li>Your message is deleted.</li>
+                        <li>You may get a temporary “out-of-order” role.</li>
+                        <li>The bot posts the current expected number to reset flow.</li>
+                    </ul>
+                </li>
+                <li>Brief “streak protection” may apply immediately after a mistake.</li>
+                <li>Editing a counting message is disallowed; edited messages are removed.</li>
+            </ul>
+        </section>
+
+        <!-- Milestones -->
+        <section aria-labelledby="milestones" class="guidelines-section section-card">
+            <h2 id="milestones">
+                Milestones & celebrations
+                <a class="anchor" href="#milestones">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>Every 100 numbers, the poster may receive a milestone role.</li>
+                <li>The bot may react to valid numbers and post celebratory notes.</li>
+            </ul>
+        </section>
+
+        <!-- Master Counter -->
+        <section aria-labelledby="master" class="guidelines-section section-card">
+            <h2 id="master">
+                Master Counter role
+                <a class="anchor" href="#master">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>The top contributor on the leaderboard is automatically assigned the “Master Counter” role.</li>
+                <li>If the leader changes, the role is moved accordingly.</li>
+            </ul>
+        </section>
+
+        <!-- Leaderboard -->
+        <section aria-labelledby="leaderboard" class="guidelines-section section-card">
+            <h2 id="leaderboard">
+                Leaderboard command
+                <a class="anchor" href="#leaderboard">#</a>
+            </h2>
+            <p>Use this slash command to view the counting leaderboard.</p>
+            <section class="card" style="margin-top:0.75rem;">
+                <h3>Command</h3>
+                <ul class="list-tight">
+                    <li><code>/leaderboard counting</code></li>
+                </ul>
+            </section>
+            <section class="card" style="margin-top:0.75rem;">
+                <h3>What it shows</h3>
+                <ul class="list-tight">
+                    <li>A ranked list of users with their total correct counts.</li>
+                    <li>User mentions with scores; pagination if >10 results.</li>
+                </ul>
+            </section>
+            <section class="card" style="margin-top:0.75rem;">
+                <h3>Options</h3>
+                <ul class="list-tight">
+                    <li><strong>top</strong> — how many users to display (1–50). Default: 10.</li>
+                    <li><strong>include_pending</strong> — include freshest cached increments (default: true). Set false for fully saved data.</li>
+                </ul>
+            </section>
+            <section class="card" style="margin-top:0.75rem;">
+                <h3>Rate limits and timing</h3>
+                <ul class="list-tight">
+                    <li>Light per-server cooldown (~1 use/3s) with cached results for performance.</li>
+                    <li>If cache is warming or unavailable, you may see a short notice—try again shortly.</li>
+                </ul>
+            </section>
+            <section class="card" style="margin-top:0.75rem;">
+                <h3>Possible responses</h3>
+                <ul class="list-tight">
+                    <li>A leaderboard embed (single page or with pagination controls).</li>
+                    <li>“The counting leaderboard is empty.” if no data yet.</li>
+                    <li>A short error message if something goes wrong.</li>
+                </ul>
+            </section>
+        </section>
+
+        <!-- FAQ -->
+        <section aria-labelledby="faq" class="guidelines-section section-card">
+            <h2 id="faq">
+                Quick FAQ
+                <a class="anchor" href="#faq">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li><strong>Can I add text with my number?</strong> No. Post the number only.</li>
+                <li><strong>Are edited messages counted?</strong> No. Edits are disallowed and may be deleted.</li>
+                <li><strong>Why couldn’t I post two numbers in a row?</strong> Double-posts are only allowed after a delay or during idle periods; otherwise wait.</li>
+                <li><strong>My leaderboard score looks slightly behind—why?</strong> Updates may be batched. <em>include_pending</em> shows cached totals; otherwise you see persisted data.</li>
+                <li><strong>Why did I get an “out-of-order” role?</strong> You posted out of sequence or broke a rule; it’s temporary when you resume counting correctly.</li>
+            </ul>
+            <p class="muted">Questions or issues? Ask a moderator. Have fun counting!</p>
+        </section>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Empire of Shadows. All Rights Reserved.</p>
+    <div id="social-icons-container"></div>
+    <script src="/global/js/social-icons.js"></script>
+    <script src="/wiki/shared/nav.js"></script>
+    <script>
+        // Dynamically load the navigation
+        fetch('/wiki/shared/nav.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('nav-placeholder-side').innerHTML = html;
+                // Initialize navigation state handlers
+                initSideNav?.();
+                restoreNavState?.();
+            })
+            .catch(e => console.error('Error loading navigation:', e));
+    </script>
+
+    <!-- Smooth in-page navigation and Back-to-Top -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+        // Smooth scroll for hash links
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            const id = a.getAttribute('href').slice(1);
+            const target = document.getElementById(id);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.replaceState(null, '', '#' + id);
+            }
+        });
+        // Back-to-top
+        const backBtn = document.querySelector('.back-to-top');
+        const toggleBackBtn = () => {
+            if (window.scrollY > 280) backBtn.classList.add('show'); else backBtn.classList.remove('show');
+        };
+        window.addEventListener('scroll', toggleBackBtn, { passive: true });
+        window.addEventListener('load', toggleBackBtn);
+        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</footer>
+</body>
+</html>

@@ -1,0 +1,209 @@
+.main-content {
+  grid-area: main-content;
+  justify-self: center;
+  width: 100%;
+    height: 100%;
+}
+.main-section2 .main-section3 .main-section4 {
+  padding: 1rem 1rem;
+  margin: 1rem auto;
+}
+.main-section {
+      padding: 2rem 1rem;
+  margin: 2rem auto;
+}
+/* Shared Base Style */
+.main-section,
+.main-section2,
+.main-section3,
+.main-section4 {
+  background: transparent;
+  border: none;
+
+  max-width: 1000px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: none;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Adjust timing for variety if needed */
+.main-section2 { animation-delay: 0.2s; }
+.main-section3 { animation-delay: 0.4s; }
+.main-section4 { animation-delay: 0.6s; }
+
+/* Optional visual highlight for section 1 */
+.main-section {
+  box-shadow: 0 0 20px rgba(77, 14, 179, 0.3);
+  transform: scale(1.01);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.main-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(77, 14, 179, 0.4);
+}
+
+/* Headings */
+.main-section h1 {
+  font-size: 2.25rem;
+  color: #e0d7f8;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Paragraphs */
+.main-section p {
+  color: #ccc;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+/* Hero text */
+.hero-btn-text {
+  font-size: 1.3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  margin: 2rem 0 1rem;
+  animation: fadeIn 2.8s ease-in;
+}
+
+/* Hero button */
+.hero-btn {
+  background-color: #4d0eb3;
+  color: white;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-family: 'bebas-neue', sans-serif;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 2rem;
+  animation:
+    fadeIn 2.8s ease-in forwards,
+    pulseDarken 4s ease-in-out 2.8s infinite;
+  transition: background 0.3s ease;
+}
+.hero-btn:hover {
+  background-color: #4602b5;
+  animation-play-state: paused;
+  filter: brightness(1);
+}
+
+/* Pulse effect */
+@keyframes pulseDarken {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(0.7); }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Expandable section (future-proofing) */
+.expandable-section {
+  position: relative;
+  margin: 1rem 0;
+}
+.expand-btn {
+  display: none;
+  background: #4d0eb3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  margin: 0.5rem auto;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+    .mobile-collapse-wrapper {
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
+        transition: max-height 0.5s ease-out;
+    }
+
+    .mobile-collapse-wrapper.expanded {
+        max-height: 1000px;
+    }
+
+    .mobile-collapse-wrapper::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        pointer-events: none;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .mobile-collapse-wrapper.expanded::after {
+        opacity: 0;
+    }
+
+    .expand-btn {
+        display: block;
+        background: #4d0eb3;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        margin: 0.75rem auto 1rem;
+        cursor: pointer;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .expand-btn:hover {
+        background-color: #6d29d1;
+    }
+}
+/* Mobile optimizations for main content */
+@media screen and (max-width: 768px) {
+    .main-section {
+        margin-top: 3rem;
+        padding: 1rem;
+        transform: none;
+    }
+
+    .main-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .main-section p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .hero-btn-text {
+        font-size: 1.1rem;
+        margin: 1rem 0;
+    }
+
+    .hero-btn {
+        padding: 0.6rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    /* Ensure content stays within viewport */
+    .main-section,
+    .main-section2,
+    .main-section3,
+    .main-section4 {
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+}
+

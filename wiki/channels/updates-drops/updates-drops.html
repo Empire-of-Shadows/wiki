@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta-Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Empire of Shadows' Updates & Drops Hub - Stay informed about game updates, claim free premium games, and track Twitch Prime drops and gaming rewards">
+    <meta name="keywords" content="free games, game updates, twitch prime drops, gaming news, prime gaming rewards, free premium games, game notifications, gaming community updates, game deals, twitch drops tracker, gaming announcements">
+    <meta name="author" content="Empire of Shadows">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#4d0eb3">
+    <title>Updates & Drops - Empire of Shadows Wiki</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav/favicon-32x32.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/global/css/normalize.css">
+    <link rel="stylesheet" href="/global/css/global_reset.css">
+    <link rel="stylesheet" href="/global/css/index-header.css">
+    <link rel="stylesheet" href="/wiki/home.css">
+    <link rel="stylesheet" href="/wiki/shared/nav.css">
+
+    <style>
+        /* Local visual tweaks to match the modern card/pill look */
+        .page-hero h1 { display:flex; align-items:center; gap:.5rem }
+
+        .demo-card{
+            background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+            border: 1px solid rgba(255,255,255,.08);
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: 0 8px 28px rgba(0,0,0,.28);
+        }
+        .pill{
+            display:inline-flex; align-items:center; gap:.35rem;
+            padding:.28rem .6rem; border-radius:999px;
+            background: rgba(255,255,255,.08);
+            border: 1px solid rgba(255,255,255,.14);
+            color:#fff; font-size:.82rem; white-space:nowrap;
+        }
+        .muted-badge{ color:#ffd166; background:rgba(255,255,255,.06); border:1px dashed rgba(255,255,255,.28); }
+        .row{ display:flex; flex-wrap:wrap; gap:.5rem; align-items:center; }
+        .cta{
+            display:inline-flex; align-items:center; gap:.5rem;
+            background:linear-gradient(135deg,#4d0eb3,#7a3df0);
+            color:#fff; text-decoration:none; padding:.55rem .85rem; border-radius:999px;
+            border:1px solid rgba(255,255,255,.12);
+            font-weight:700;
+        }
+        .cta.secondary{ background:transparent; border:1px solid rgba(255,255,255,.18); }
+        /* Unified snapshot stats */
+        .stats-4{ display:grid; grid-template-columns:repeat(4,1fr); gap:.6rem; margin-top:.6rem; }
+        @media (max-width: 960px){ .stats-4{ grid-template-columns:repeat(2,1fr); } }
+        @media (max-width: 520px){ .stats-4{ grid-template-columns:1fr; } }
+        .stat{
+            text-align:center; padding:.8rem .6rem; border-radius:10px;
+            background: rgba(255,255,255,.06);
+            border:1px solid rgba(255,255,255,.08);
+        }
+        .stat .n{ font-weight:800; font-size:1.25rem; }
+        .stat .l{ color:#9aa3b2; font-size:.84rem; }
+
+        /* Ensure media and layout don't overflow on narrow screens */
+        .section-card, .card, .demo-card, .row { min-width:0; }
+        img, svg, video { max-width:100%; height:auto; }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="header-main">
+    <div class="header-container">
+        <!-- Logo -->
+        <a class="nav-logo" href="/index.html">
+            <img src="/images/Logo.png" alt="Empire of Shadows Logo" width="85" height="85">
+        </a>
+        <div class="header-line"></div>
+    </div>
+</header>
+
+<div class="layout-container">
+    <!-- Sidebar navigation -->
+    <div id="nav-placeholder-side"></div>
+    <!-- Backdrop -->
+    <div class="nav-backdrop"></div>
+
+    <main class="content">
+        <header class="page-hero">
+            <h1>🔔 Updates & Drops</h1>
+            <p class="muted">Opt in to what you want. Get game updates, claim limited‑time freebies, and track Prime drops — without noise.</p>
+        </header>
+
+        <!-- Unified demo snapshot -->
+        <section class="section-card" aria-labelledby="snapshot-title">
+            <h2 id="snapshot-title">Snapshot <a class="anchor" href="#snapshot-title">#</a></h2>
+            <p class="muted">A quick look at monthly activity across updates, freebies, and Prime drops. Includes how many titles we actively follow.</p>
+            <aside class="demo-card" aria-label="Unified demo snapshot">
+                <div class="row" style="justify-content:space-between;">
+                    <span class="pill">Demo snapshot</span>
+                    <span class="pill muted-badge" title="Concept demo only">Concept demo</span>
+                </div>
+                <div class="stats-4">
+                    <div class="stat">
+                        <div class="n" id="stat-updates" data-count="0">0</div>
+                        <div class="l">Game updates / month</div>
+                    </div>
+                    <div class="stat">
+                        <div class="n" id="stat-titles" data-count="24">24</div>
+                        <div class="l">Titles followed (opt‑in)</div>
+                    </div>
+                    <div class="stat">
+                        <div class="n" id="stat-free" data-count="0">0</div>
+                        <div class="l">Free games posted / month</div>
+                    </div>
+                    <div class="stat">
+                        <div class="n" id="stat-prime" data-count="0">0</div>
+                        <div class="l">Prime drops / month</div>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:.7rem;">
+                    <span class="pill">Role‑based alerts</span>
+                    <span class="pill">Expiry reminders</span>
+                    <span class="pill">Spoiler‑safe</span>
+                </div>
+            </aside>
+        </section>
+
+        <!-- On this page -->
+        <nav class="card toc-card" aria-label="On this page">
+            <strong>On this page</strong>
+            <ul class="list-tight">
+                <li><a class="toc-link" href="#game-updates">Game updates</a></li>
+                <li><a class="toc-link" href="#freebies">Freebies</a></li>
+                <li><a class="toc-link" href="#prime-drops">Prime drops</a></li>
+            </ul>
+        </nav>
+
+        <!-- Game updates -->
+        <section id="game-updates" class="section-card" aria-labelledby="game-updates-title">
+            <h2 id="game-updates-title">🛠️ Game updates <a class="anchor" href="#game-updates">#</a></h2>
+            <p class="muted"><span class="pill muted-badge" title="Work in progress">WIP</span> This section is a work in progress.</p>
+            <p>Stay on top of patch notes, balance tweaks, and major announcements for the games you follow.</p>
+            <ul class="list-tight">
+                <li>Opt‑in roles let you pick the exact games you care about.</li>
+                <li>Clean, summarized posts with links to official sources.</li>
+                <li>Quick filters so you can skim or deep‑dive.</li>
+            </ul>
+            <div class="row mt-1">
+                <a class="cta secondary" href="https://discord.com/channels/1265120128295632926/1266991396662022209/1319943960998838272" target="_blank" rel="noopener">Choose game roles ↗</a>
+            </div>
+        </section>
+
+        <!-- Freebies -->
+        <section id="freebies" class="section-card" aria-labelledby="freebies-title">
+            <h2 id="freebies-title">📢 Freebies <a class="anchor" href="#freebies">#</a></h2>
+            <p>Limited‑time free games (typically $10+) and occasional DLC/loot.</p>
+            <ul class="list-tight">
+                <li>Clear “where to claim” instructions with time left.</li>
+                <li>One post per offer — no spammy reposts.</li>
+                <li>Reminder ping before offers expire.</li>
+            </ul>
+            <div class="row mt-1">
+                <a class="cta secondary" href="https://discord.com/channels/1265120128295632926/1266991396662022209/1320184305137487944" target="_blank" rel="noopener">Enable freebies alerts ↗</a>
+                <a class="pill" href="https://patchbot.io/" target="_blank" rel="noopener" title="Service provider for update feeds" style="text-decoration:none;">Powered by PatchBot</a>
+            </div>
+        </section>
+
+        <!-- Prime drops -->
+        <section id="prime-drops" class="section-card" aria-labelledby="prime-drops-title">
+            <h2 id="prime-drops-title">🪂 Prime drops <a class="anchor" href="#prime-drops">#</a></h2>
+            <p class="muted"><span class="pill muted-badge" title="Currently unavailable — in progress">Unavailable</span> We plan to bring this feature back.</p>
+            <p>Track Prime Gaming drops and Twitch rewards in one tidy feed. Opt in once, get the good stuff on time. This feature is currently in development.</p>
+            <ul class="list-tight">
+                <li>Drop windows with start/end dates and short summaries.</li>
+                <li>One‑tap links to claim or check eligibility.</li>
+                <li>Optional reminders for your followed titles.</li>
+            </ul>
+            <div class="row mt-1">
+                <a class="cta secondary" aria-disabled="true" tabindex="-1" title="Currently unavailable — coming soon" style="pointer-events:none; opacity:.6;" href="https://discord.com/channels/1265120128295632926/1266991396662022209/1320185481819852901" target="_blank" rel="noopener">Subscribe to drops (Planed)</a>
+                <span class="pill muted-badge" title="Work in progress">Planned</span>
+            </div>
+        </section>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Empire of Shadows. All Rights Reserved.</p>
+    <div id="social-icons-container"></div>
+    <script src="/global/js/social-icons.js"></script>
+    <script src="/wiki/shared/nav.js"></script>
+    <script>
+        // Dynamically load the navigation
+        fetch('/wiki/shared/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder-side').innerHTML = data;
+                // Initialize navigation state handlers
+                initSideNav?.();
+                restoreNavState?.();
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
+
+    <!-- Smooth in-page navigation + Back-to-Top -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+        // Smooth scroll for same-page anchors
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            const id = a.getAttribute('href').slice(1);
+            const target = document.getElementById(id);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.replaceState(null, '', '#' + id);
+            }
+        });
+
+        // Back-to-top visibility + behavior
+        const backBtn = document.querySelector('.back-to-top');
+        const toggleBackBtn = () => {
+            if (window.scrollY > 280) backBtn.classList.add('show');
+            else backBtn.classList.remove('show');
+        };
+        window.addEventListener('scroll', toggleBackBtn, { passive: true });
+        window.addEventListener('load', toggleBackBtn);
+        backBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Lightweight counter animation for demo snapshot
+        const easeOut = t => 1 - Math.pow(1 - t, 4);
+        const counters = document.querySelectorAll('[data-count]');
+        const animateCount = (el, to, dur=900) => {
+            const start = performance.now();
+            const from = 0;
+            const step = now => {
+                const p = Math.min(1, (now - start) / dur);
+                const v = Math.round(from + (to - from) * easeOut(p));
+                el.textContent = v.toLocaleString();
+                if (p < 1) requestAnimationFrame(step);
+            };
+            requestAnimationFrame(step);
+        };
+        const reveal = () => {
+            const io = new IntersectionObserver((entries, obs) => {
+                entries.forEach(e => {
+                    if (e.isIntersecting){
+                        const el = e.target;
+                        animateCount(el, Number(el.dataset.count));
+                        obs.unobserve(el);
+                    }
+                });
+            }, {threshold: .4});
+            counters.forEach(c => io.observe(c));
+        };
+        if (document.readyState !== 'loading') reveal(); else document.addEventListener('DOMContentLoaded', reveal);
+
+        // Connect snapshot to backend averages
+        (function connectSnapshot() {
+            const endpoint = 'https://api.empireofshadows.club/stats/totals';
+
+            // Helper: set value with animation if available, otherwise direct set
+            const setValue = (el, value) => {
+                const n = Number(value) || 0;
+                el.dataset.count = String(n);
+
+                // If our IntersectionObserver-based reveal already animated, just set text.
+                // Otherwise, try to animate if the helper exists and the element is in view.
+                const inView = (() => {
+                    const rect = el.getBoundingClientRect();
+                    return rect.top < window.innerHeight && rect.bottom > 0;
+                })();
+
+                if (typeof animateCount === 'function' && inView) {
+                    animateCount(el, n);
+                } else {
+                    el.textContent = n.toLocaleString();
+                }
+            };
+
+            const ids = {
+                Updates: document.getElementById('stat-updates'),
+                Free: document.getElementById('stat-free'),
+                Prime: document.getElementById('stat-prime')
+            };
+
+            fetch(endpoint, { headers: { 'Accept': 'application/json' } })
+                .then(r => {
+                    if (!r.ok) throw new Error('Failed to load stats: ' + r.status);
+                    return r.json();
+                })
+                .then(rows => {
+                    // rows example:
+                    // [ { _id: "Prime", average_per_month: 1 }, { _id: "Free", ... }, { _id: "Updates", ... } ]
+                    rows.forEach(row => {
+                        const key = row?._id;
+                        const avg = row?.average_per_month;
+                        if (key && key in ids && ids[key]) {
+                            setValue(ids[key], avg);
+                        }
+                    });
+                })
+                .catch(err => {
+                    console.error('Snapshot fetch error:', err);
+                    // Optional: keep defaults or show a subtle error state
+                });
+        })();
+
+    </script>
+</footer>
+</body>
+</html>

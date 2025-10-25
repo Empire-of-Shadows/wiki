@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta-Information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quick overview of the Empire of Shadows Discord Counting Game — rules, cooldowns, handling mistakes, milestones, the Master Counter role, and the /leaderboard counting command.">
+    <meta name="keywords" content="counting game, discord counting, counting rules, cooldowns, double posting, mistakes, milestones, Master Counter, leaderboard, /leaderboard counting, server games, Empire of Shadows, EOSO wiki">
+    <meta name="author" content="Empire of Shadows">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#4d0eb3">
+    <title>Counting Game Overview - Empire of Shadows Wiki</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fav/favicon-32x32.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/global/css/normalize.css">
+    <link rel="stylesheet" href="/global/css/global_reset.css">
+    <link rel="stylesheet" href="/global/css/index-header.css">
+    <link rel="stylesheet" href="/wiki/home.css">
+    <link rel="stylesheet" href="/wiki/shared/nav.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header-main">
+    <div class="header-container">
+        <!-- Logo -->
+        <a class="nav-logo" href="/index.html">
+            <img src="/images/Logo.png" alt="Empire of Shadows Logo" width="85" height="85">
+        </a>
+        <div class="header-line"></div>
+    </div>
+</header>
+
+<div class="layout-container">
+    <!-- Sidebar navigation -->
+    <div id="nav-placeholder-side"></div>
+    <!-- Backdrop -->
+    <div class="nav-backdrop"></div>
+
+    <main class="content">
+        <header class="page-hero">
+            <h1>Counting Game — Quick Overview</h1>
+        </header>
+
+        <!-- TL;DR -->
+        <section aria-labelledby="tldr" class="section-card callout--tldr">
+            <h2 id="tldr" class="visually-hidden">TL;DR</h2>
+            <ul class="list-tight">
+                <li>Post the next number only—digits, no text/emojis; max 12 digits.</li>
+                <li>Cooldown ≈2s between valid numbers; no double-posts unless idle or grace windows apply.</li>
+                <li>Mistakes are deleted; bot posts expected number. Milestones every 100; top counter holds Master Counter.</li>
+                <li>See ranks with <code>/leaderboard counting</code> (options for size and freshness).</li>
+            </ul>
+        </section>
+
+        <!-- On this page -->
+        <nav class="card toc-card" aria-label="On this page">
+            <strong>On this page</strong>
+            <ul class="list-tight">
+                <li><a class="toc-link" href="#basics">Basics</a></li>
+                <li><a class="toc-link" href="#timing">Timing & double-posts</a></li>
+                <li><a class="toc-link" href="#mistakes">Mistakes & edits</a></li>
+                <li><a class="toc-link" href="#milestones">Milestones</a></li>
+                <li><a class="toc-link" href="#master-counter">Master Counter</a></li>
+                <li><a class="toc-link" href="#leaderboard">Leaderboard command</a></li>
+            </ul>
+        </nav>
+
+        <!-- Basics -->
+        <section aria-labelledby="basics" class="guidelines-section section-card">
+            <h2 id="basics">
+                Basics
+                <a class="anchor" href="#basics">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li><strong>Where:</strong> Post numbers only in the designated counting channel(s).</li>
+                <li><strong>Goal:</strong> Count up together, one message at a time (1, 2, 3, …).</li>
+                <li><strong>Format:</strong> Digits only (0–9). No text, emojis, or symbols. Max 12 digits.</li>
+            </ul>
+        </section>
+
+        <!-- Timing -->
+        <section aria-labelledby="timing" class="guidelines-section section-card">
+            <h2 id="timing">
+                Timing & double-posts
+                <a class="anchor" href="#timing">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li><strong>Cooldown:</strong> ~1 valid number every 2 seconds per user.</li>
+                <li><strong>No double-posting</strong> unless one of these applies:
+                    <ul class="list-tight">
+                        <li>~15s have passed since the last valid number, or</li>
+                        <li>Channel idle for ~30s, or</li>
+                        <li>Short “streak protection” right after a mistake.</li>
+                    </ul>
+                </li>
+                <li><strong>Master Counter:</strong> stricter double-post timer (≈3× longer).</li>
+            </ul>
+        </section>
+
+        <!-- Mistakes -->
+        <section aria-labelledby="mistakes" class="guidelines-section section-card">
+            <h2 id="mistakes">
+                Mistakes & edits
+                <a class="anchor" href="#mistakes">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>Wrong/invalid posts are deleted; a temporary “out-of-order” role may be applied.</li>
+                <li>The bot posts the expected number after mistakes to stabilize the count.</li>
+                <li>Editing counting messages isn’t allowed; edited ones are deleted.</li>
+            </ul>
+        </section>
+
+        <!-- Milestones -->
+        <section aria-labelledby="milestones" class="guidelines-section section-card">
+            <h2 id="milestones">
+                Milestones
+                <a class="anchor" href="#milestones">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>Every 100 numbers may grant a milestone role; the bot may react/celebrate.</li>
+            </ul>
+        </section>
+
+        <!-- Master Counter -->
+        <section aria-labelledby="master-counter" class="guidelines-section section-card">
+            <h2 id="master-counter">
+                Master Counter
+                <a class="anchor" href="#master-counter">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li>Top leaderboard user gets “Master Counter.”</li>
+                <li>Role automatically moves with the leader.</li>
+            </ul>
+        </section>
+
+        <!-- Leaderboard -->
+        <section aria-labelledby="leaderboard" class="guidelines-section section-card">
+            <h2 id="leaderboard">
+                Leaderboard command
+                <a class="anchor" href="#leaderboard">#</a>
+            </h2>
+            <ul class="list-tight">
+                <li><strong>Use:</strong> <code>/leaderboard counting</code></li>
+                <li>Shows ranked users with totals; pagination if more than 10.</li>
+            </ul>
+            <section class="card" style="margin-top:0.75rem;">
+                <h3>Options</h3>
+                <ul class="list-tight">
+                    <li><strong>top:</strong> 1–50 (default 10)</li>
+                    <li><strong>include_pending:</strong> true/false (default true; show freshest cached totals)</li>
+                </ul>
+            </section>
+            <section class="card" style="margin-top:0.75rem;">
+                <h3>Rate limits</h3>
+                <ul class="list-tight">
+                    <li>Light per-server cooldown (~1 use/3s); results are cached.</li>
+                </ul>
+            </section>
+            <section class="card" style="margin-top:0.75rem;">
+                <h3>Possible outputs</h3>
+                <ul class="list-tight">
+                    <li>Embed (with/without pages)</li>
+                    <li>“Empty” notice</li>
+                    <li>Short error message</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Empire of Shadows. All Rights Reserved.</p>
+    <div id="social-icons-container"></div>
+    <script src="/global/js/social-icons.js"></script>
+    <script src="/wiki/shared/nav.js"></script>
+    <script>
+        // Dynamically load the navigation
+        fetch('/wiki/shared/nav.html')
+            .then(r => r.text())
+            .then(html => {
+                document.getElementById('nav-placeholder-side').innerHTML = html;
+                // Initialize navigation state handlers
+                initSideNav?.();
+                restoreNavState?.();
+            })
+            .catch(e => console.error('Error loading navigation:', e));
+    </script>
+
+    <!-- Smooth in-page navigation and Back-to-Top -->
+    <button class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+        // Smooth scroll for hash links
+        document.addEventListener('click', (e) => {
+            const a = e.target.closest('a[href^="#"]');
+            if (!a) return;
+            const id = a.getAttribute('href').slice(1);
+            const target = document.getElementById(id);
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                history.replaceState(null, '', '#' + id);
+            }
+        });
+        // Back-to-top
+        const backBtn = document.querySelector('.back-to-top');
+        const toggleBackBtn = () => {
+            if (window.scrollY > 280) backBtn.classList.add('show'); else backBtn.classList.remove('show');
+        };
+        window.addEventListener('scroll', toggleBackBtn, { passive: true });
+        window.addEventListener('load', toggleBackBtn);
+        backBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+</footer>
+</body>
+</html>
